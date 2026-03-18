@@ -1,0 +1,17 @@
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore database folder
+DB/
+
+# Ignore langg_env folder
+langg_env/
+
+archived_notebooks/
+
+*.yaml
