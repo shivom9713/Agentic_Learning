@@ -119,7 +119,10 @@ if user_input:
     with st.chat_message("user"):
         st.write(user_input)
 
-    config = {"configurable": {"thread_id": st.session_state['thread_id']}}
+    config = {"configurable": {"thread_id": st.session_state['thread_id']},
+    "metadata":{"thread_id": st.session_state['thread_id']}, ### This is important for LangGraph to map thread for tracability and debugging  
+    "run_name":"chat_turn"  ### For better traceability in LangGraph, we name each run as "chat_turn"
+    }
 
     # Stream AI response
     def ai_token_gen(user_input, config):

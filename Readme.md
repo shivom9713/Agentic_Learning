@@ -18,6 +18,8 @@ pip install langchain_openai
 pip install langchain-openai
 pip install dotenv
 pip install streamlit
+
+pip install langgraph-checkpoint-sqlite 
 ```
 
 ## To visualize workflows
