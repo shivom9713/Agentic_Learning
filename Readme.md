@@ -28,6 +28,19 @@ pip install ipython
 pip install grandalf
 ```
 
+#### For Jupyter testing 
+
+```
+pip install ipykernel jupyter
+```
+
+### For Adding built-in tools
+
+```
+pip install -qU duckduckgo-search langchain-community
+pip install -U ddgs
+```
+
 
 ### To Persist
 
