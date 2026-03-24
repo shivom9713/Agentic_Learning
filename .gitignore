@@ -12,6 +12,7 @@ DB/
 # Ignore langg_env folder
 langg_env/
 langenv/
+generated_articles/
 
 archived_notebooks/
 

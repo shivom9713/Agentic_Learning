@@ -27,7 +27,7 @@ def calculate (a: int, b: int, operation: str) -> int:
 
 @tool
 def get_stock_price(symbol: str) -> str:
-    """Get current stock price for a given ticker symbol (e.g., AAPL, TSLA)."""
+    """Get current stock price for a given ticker symbol (e.g., AAPL, TSLA). If you dont know the ticker symbol, use the search tool to find it first."""
     
     try:
         stock = yf.Ticker(symbol)

@@ -132,15 +132,22 @@ if user_input:
             config=config,
             stream_mode="messages"
         ):
+        
             if isinstance(chunk, AIMessageChunk) and chunk.content:
                 yield chunk.content
+
+             
             elif isinstance(chunk, AIMessage):
                 final_text = chunk.content
         return final_text
 
-    with st.chat_message("assistant"):
-        placeholder = st.empty()
-        final_full_text = placeholder.write_stream(ai_token_gen(user_input, config))
+    
+    with st.spinner("Generating Response ...", show_time=True):
+        with st.chat_message("assistant"):
+            placeholder = st.empty()
+            final_full_text = placeholder.write_stream(ai_token_gen(user_input, config))
+
+    
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': final_full_text})
 
